@@ -1,0 +1,48 @@
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.has-popover{
+  color: $primary;
+  cursor: pointer;
+}
+.popover-table{
+  .title{
+    text-align: right;
+    padding-right: 10px;
+    text-transform: capitalize;
+    &:after{
+      content: ':';
+      margin-left: 3px;
+    }
+  }
+  .amount{
+    text-align: right;
+  }
+}
+
+.over-text{
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.flex-box{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content:space-between;
+  >.flex-header{
+    padding:15px 10px 10px 15px;
+    flex:0 0 auto;
+  }
+  >.flex-content{
+    flex:0 1 auto;
+    height: 99999px;
+    position: relative;
+  }
+}

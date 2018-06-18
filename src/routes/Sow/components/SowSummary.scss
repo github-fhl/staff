@@ -1,0 +1,29 @@
+.sow-header{
+  .item{
+    margin-right: 15px;
+    .ant-switch{
+      margin-left: 5px;
+    }
+  }
+}
+
+.row-disabled{
+  td{
+    background-color: #eee;
+  }
+}
+
+.bottom-panel{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #f00;
+  .bottom-panel-item{
+    background: #f7f7f7;
+    border: 0;
+    overflow: hidden;
+  }
+  .ant-collapse-header{
+    background-color: #f3eaab;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../styles/base";
+$form-bg:#f4f8f9;
+.table-form{
+  .ant-table{
+    display: inline-block;
+    max-width: 100%;
+  }
+  .editable-row-operations{
+    font-size: 13px;
+    a{
+      +a{
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  //表单特殊处理
+  .ant-table-tbody{
+    .ant-input,.ant-select-selection,.ant-input-number,.ant-input-number-input{
+      border: none;
+      background-color: $form-bg;
+    }
+    .ant-select,.ant-input-number{
+      width: 100%;
+    }
+  }
+  
+  // 空数据提示默认不显示
+  .ant-table-placeholder{
+    display: none;
+  }
+}

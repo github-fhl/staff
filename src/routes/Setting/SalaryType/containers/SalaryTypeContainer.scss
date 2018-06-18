@@ -1,0 +1,22 @@
+@import "../../../../styles/base";
+.index-box{
+  .index-num{
+    display: inline-block;
+    width: 30px;
+  }
+  .anticon{
+    cursor: pointer;
+    &.disabled{
+      opacity:0.3;
+      cursor: default;
+      pointer-events: none;
+    }
+    &+.anticon{
+      margin-left: 5px;
+    }
+    &:hover{
+      color: $primary;
+    }
+  }
+}
+

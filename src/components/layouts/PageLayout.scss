@@ -1,0 +1,163 @@
+@import '../../styles/base';
+.layout-main{
+  min-height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .ant-menu-inline-collapsed>.ant-menu-item{
+    padding:0 16px !important;
+  }
+  .ant-menu-inline .ant-menu-item,.ant-menu-vertical .ant-menu-item{
+    height: 40px;
+    line-height:40px;
+  }
+  .ant-menu-inline-collapsed{
+    width: 50px;
+  }
+  .ant-layout-sider-collapsed{
+    .anticon {
+      font-size: 18px;
+    }
+    .nav-text {
+      display: none;
+    }
+    .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+      display: none;
+    }
+    .user-name{
+      padding:0 7px 0 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .logo{
+      span{
+        display: none;
+      }
+    }
+  }
+}
+
+// 主导航
+.side-main{
+  background-color: #42485b;
+  padding-top: 50px;
+  z-index: 100;
+  .trigger{
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .divider{
+    width: 90%;
+    margin:5px auto 5px;
+    height: 0;
+    border-right:0;
+    border-top:#666 solid 1px;
+    border-bottom:#555 solid 1px;
+  }
+  .ant-menu.ant-menu-vertical{
+    .ant-menu-item-selected{
+      background-color: rgba($primary,0.5);
+    }
+  }
+  .logo{
+    text-align: center;
+    margin-top: 40px;
+    strong{
+      //font-weight: normal;
+      color: $primary;
+      font-size: 28px;
+      margin-right: 2px;
+    }
+    span{
+      color: #ccc;
+      font-size: 18px;
+    }
+  }
+}
+
+.content{
+  //margin: 0 10px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  .content-wrap{
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: auto;
+  }
+}
+
+
+$trigger-width:25px;
+$trigger-height:40px;
+$trigger-triangle:15px;
+// 子导航
+.side-sub{
+  background-color: #eaedf1;
+  overflow: hidden;
+  .sub-nav-title{
+    height: 50px;
+    line-height: 50px;
+    background-color: #d9dee4;
+    margin: 0;
+    font-size: 24px;
+    padding-left: 24px;
+  }
+  &.ant-layout-sider-collapsed{
+    overflow: visible;
+    .trigger{
+      left: -10px;
+      &:hover{
+        left:0;
+      }
+      &:after{
+        left: 0;
+        border-width:$trigger-triangle $trigger-width;
+        border-color: transparent transparent transparent  #d9dee4;
+      }
+    }
+  }
+  .trigger{
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 10;
+    cursor: pointer;
+    width: $trigger-width;
+    height: $trigger-height;
+    line-height:$trigger-height;
+    transition: all 0.2s;
+    &:hover{
+      right:0;
+    }
+    &:after{
+      z-index: -1;
+      position: absolute;
+      content:'';
+      border-width:$trigger-triangle $trigger-width;
+      border-style:solid;
+      border-color: transparent #f9f9f9 transparent transparent;
+      right: 0;
+      line-height: 0;
+      height:$trigger-height+$trigger-triangle*2;
+      top:-$trigger-triangle;
+    }
+  }
+  .ant-menu-light{
+    background-color: transparent;
+    &:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: #fff;
+      &:after{
+        display: none;
+      }
+    }
+  }
+  
+}

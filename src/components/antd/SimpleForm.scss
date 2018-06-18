@@ -1,0 +1,52 @@
+.input-underline,.select-underline .ant-select-selection{
+  width: 100%;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  box-shadow: none;
+  &:focus{
+    box-shadow:none;
+  }
+  .ant-input-number-input-wrap{
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+.select-underline{
+  &:focus{
+    outline: none;
+  }
+  .ant-select-selection{
+    box-shadow: none;
+  }
+}
+
+.simple-form{
+  margin-top: 20px;
+  .ant-form-item{
+    width: 400px;
+    padding-bottom: 24px;
+  }
+  .ant-form-item-with-help{
+    margin-bottom: 0;
+  }
+  .ant-form-item-label label{
+    color: inherit;
+  }
+}
+.form-action{
+  border-top:#eee solid 1px;
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  .ant-btn-lg{
+    min-width: 120px;
+  }
+  .ant-btn{
+    &+.ant-btn{
+      margin-left: 10px;
+    }
+  }
+}

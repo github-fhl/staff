@@ -1,0 +1,38 @@
+//  message
+.ant-message{
+  top:50%;
+  margin-top: -100px;
+  font-size:20px;
+  .anticon{
+    font-size:28px;
+  }
+}
+.ant-message-notice-content{
+  background-color: rgba(255,255,255,0.8);
+  //box-shadow: none;
+  padding: 18px 26px;
+}
+
+// breadcrumb
+.ant-breadcrumb{
+  >span{
+    font-size: 11px;
+    &:last-child{
+      cursor: text;
+      pointer-events: none;
+      font-size: 16px;
+    }
+  }
+}
+
+.ant-breadcrumb-link{
+  text-transform: capitalize;
+}
+
+// form
+.ant-radio-inner{
+  background-color: #fff;
+}
+.ant-radio-inner:after{
+  border-radius:100%;
+}

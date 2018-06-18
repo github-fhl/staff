@@ -1,0 +1,179 @@
+@import "../../styles/base";
+$title-bg:#f7f7f7;
+
+
+$highlight0: #E1D8FF;
+$highlight1: #FFD8FD;
+$highlight2: #FFDAD8;
+$highlight3: #FFEBD8;
+$highlight4: #FFF8D8;
+$highlight5: #EFFFD8;
+$highlight6: #D8FFE6;
+
+
+// 表格选项区域宽度调整
+.ant-table-thead>tr>th{
+  font-weight: 700;
+}
+.ant-table-tbody, .ant-table-thead{
+  >tr{
+    >td,>th{
+      &.ant-table-selection-column{
+        min-width: 32px;
+        width: 32px;
+      }
+    }
+  }
+}
+
+.ant-table-tbody{
+  .ant-radio-wrapper{
+    margin-right: 0;
+  }
+}
+.table-title{
+  display: inline;
+}
+.ant-table{
+  .table-title{
+    display: inline-block;
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
+    vertical-align: top;
+  }
+  // 头部汇总 title
+  .total-amount-title{
+    display: inline-block;
+    vertical-align: top;
+    .old{
+      height: 28px;
+    }
+    .new{
+      height: 14px;
+      color: $danger;
+    }
+  }
+  
+  //title 背景
+  
+  th{
+    &.bg-success{
+      background-color: $success !important;
+    }
+    &.bg-info{
+      background-color: $info !important;;
+    }
+    &.bg-warning{
+      background-color: $warning !important;;
+    }
+    &.bg-error{
+      background-color: $error !important;;
+    }
+    &.highlight0{
+      background-color: $highlight0 !important;
+    }
+    &.highlight1{
+      background-color: $highlight1 !important;
+    }
+    &.highlight2{
+      background-color: $highlight2 !important;
+    }
+    &.highlight3{
+      background-color: $highlight3 !important;
+    }
+    &.highlight4{
+      background-color: $highlight4 !important;
+    }
+    &.highlight5{
+      background-color: $highlight5 !important;
+    }
+    &.highlight6{
+      background-color: $highlight6 !important;
+    }
+  }
+  td{
+    @each  $name,$color in
+          (highlight0,$highlight0),
+          (highlight1,$highlight1),
+          (highlight2,$highlight2),
+          (highlight3,$highlight3),
+          (highlight4,$highlight4),
+          (highlight5,$highlight5),
+          (highlight6,$highlight6)
+    {
+      &.#{$name} { background-color: rgba($color,0.4); }
+    }
+  }
+  
+}
+
+// 数据展示类table
+.table-data{
+ .ant-table-fixed th{
+   position: relative;
+    .ant-dropdown-trigger{
+      //position: absolute;
+      //top: 14px;
+      //right: 10px;
+    }
+  }
+  .ant-table-row{
+    background-color: #fff;
+  }
+  .ant-table-row:nth-child(even){
+    background-color: #f1faff;
+  }
+  .ant-table-tbody>tr:hover>td{
+    background-color: #fbfaf0;
+  }
+  td.full-td{
+    padding: 0 !important;
+    .table-inner-tr{
+      width: 100%;
+      height: 100%;
+      .table-inner-td{
+        max-width: 100%;
+        padding: 4px 8px;
+        &+.table-inner-td{
+          border-top:rgb(233,233,233) 1px solid;
+        }
+      }
+    }
+  }
+}
+
+
+//数据格式化
+.ant-table{
+  td,th{
+    &.money,&.percent,&.number{
+      text-align: right;
+    }
+  }
+}
+
+.layout-fix-content{
+  .fixed-table{
+    padding-left: 15px;
+  }
+}
+.fixed-table{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ant-table-small{
+  .ant-table-tbody>tr>td{
+    padding: 4px 8px;
+  }
+  .ant-table-thead>tr>th{
+    word-break: keep-all;
+  }
+}
+
+.table-data{
+  .ant-table-thead>tr>th{
+    background-color: #d7ebff;
+  }
+}

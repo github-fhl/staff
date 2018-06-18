@@ -1,0 +1,51 @@
+@import "../../styles/base";
+.layout-fix{
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-around;
+  .layout-fix-header{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 50px;
+    line-height: 50px;
+    @include clearfix;
+    box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
+    h2{
+      line-height: inherit;
+      font-size: 20px;
+    }
+    .ant-btn{
+      margin-left: 15px;
+      font-weight: normal;
+    }
+  }
+  .layout-fix-content{
+    flex: 1 1 auto;
+    overflow: auto;
+    padding: 10px 0 15px 30px;
+    &.layout-fix-height{
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+    }
+  }
+  .layout-fix-footer{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 50px;
+    line-height: 50px;
+    background-color: lighten($gray-light,2);
+  }
+}
+
+.page-header{
+  .ant-breadcrumb{
+    float: left;
+    margin-right: 20px;
+  }
+  .header-item{
+    font-size: 15px;
+    color: #777;
+    margin-left: 30px;}
+}

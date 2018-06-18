@@ -1,0 +1,25 @@
+.login{
+  height: 100%;
+  h1{
+    font-size:34px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .login-wrap{
+    position: relative;
+  }
+  .ant-form{
+    width: 420px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 30px 50px 50px;
+    margin-top: -200px;
+  }
+  label{
+    font-size: 16px;
+  }
+  .login-button{
+    width: 100%;
+  }
+}

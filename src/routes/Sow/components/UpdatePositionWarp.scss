@@ -1,0 +1,20 @@
+.form-bar-title{
+  border-top:#ccc dashed 1px;
+  padding-top: 30px;
+  margin:10px 40px 20px 0;
+}
+.form-bar-item{
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  .label{
+    margin-right: 10px;
+  }
+  .ant-input{
+    width: 200px;
+  }
+}
+
+.update-position-action{
+  margin-top: 20px;
+}

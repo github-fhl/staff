@@ -1,0 +1,63 @@
+.po-form{
+  margin-top: 20px;
+  .ant-form-item{
+    width: 300px;
+    padding-bottom: 24px;
+  }
+  .ant-form-item-with-help{
+    margin-bottom: 0;
+  }
+  .ant-form-item-label label{
+    color: #999;
+  }
+  .po-form-row{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+    .close-item{
+      position: absolute;
+      right: 30px;
+      font-size: 26px;
+      font-weight:200;
+      color: #f04134;
+      cursor: pointer;
+    }
+    &+.po-form-row{
+      border-top:dashed 1px #999;
+    }
+  }
+  .ant-form-explain{
+    white-space: nowrap;
+  }
+}
+.ant-alert-with-description.ant-alert-no-icon{
+  padding: 10px;
+}
+.ant-alert-with-description .ant-alert-message{
+  font-size: 14px;
+}
+.ant-alert-description{
+  font-size: 12px;
+}
+
+.sow-po-upload{
+  .ant-upload-list-text{
+    display: inline-block;
+    max-width:100%;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  .ant-upload-list-item{
+    display: none;
+    >.anticon{
+      display: none;
+    }
+    &:last-child{
+      display: inline-block;
+      width: 100%;
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
